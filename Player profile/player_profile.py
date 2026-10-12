@@ -15,12 +15,12 @@ def add_score(player, score):
 def take_damage(player, damage):
     if damage <= 0:
         print("Урон должен быть положительным")
-        return
-    player["health"] -= 50
+        return
     print("Урон нанесен")
     if player["health"] <= 0:
         player["health"] = 0
         print("У игрока не осталось здоровья. Игрок погиб")
+    player["health"] -= damage 
 def read_int(text):
     try:
         return int(input(text).strip())

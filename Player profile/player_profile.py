@@ -17,10 +17,10 @@ def take_damage(player, damage):
         print("Урон должен быть положительным")
         return
     print("Урон нанесен")
+    player["health"] -= damage 
     if player["health"] <= 0:
         player["health"] = 0
-        print("У игрока не осталось здоровья. Игрок погиб")
-    player["health"] -= damage 
+        print("У игрока не осталось здоровья. Игрок погиб") 
 def read_int(text):
     try:
         return int(input(text).strip())
